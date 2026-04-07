@@ -1,4 +1,4 @@
-# Lens Distortion Correction using OpenCV
+# Camera Calibration and Distortion Correction using OpenCV
 
 ## Description
 This project performs camera calibration and lens distortion correction using OpenCV. A chessboard pattern is used to estimate camera parameters, and the results are applied to correct distortion in a video.
@@ -63,20 +63,14 @@ They are used to remove distortion from the video frames.
 
 ---
 
-# Demo
+# Distortion Correction Output Demo
 
 ## Original vs Rectified Video
 
 | Original | Rectified |
 |----------|-----------|
-| **Original Video** | **Rectified Video** |
 | ![Original](chessboard.gif) | ![Rectified](rectified_output.gif) |
 
-## Notes
-
-- The calibration is based on chessboard corner detection from multiple frames.
-- The distortion coefficients and camera matrix are computed using OpenCV.
-- The rectified video removes lens distortion effects and aligns straight lines properly.
 
 ## Controls
 - `Space` : Select frame during calibration  
