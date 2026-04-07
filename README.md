@@ -73,8 +73,11 @@ They are used to remove distortion from the video frames.
 
 
 ## Controls
+  Camera_calibration
 - `Space` : Select frame during calibration  
-- `Enter` : Finish selection  
+- `Enter` : Finish selection
+  
+Distortion_correction
 - `R` : Toggle original / rectified view  
 - `Q` : Quit  
 
