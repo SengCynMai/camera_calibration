@@ -29,8 +29,6 @@ The goal is to make curved lines in a distorted video appear straight after cali
 - camera_calibration.py : Select frames and compute camera parameters  
 - distortion_correction.py : Apply distortion correction to video  
 - calibration_result.npz : Saved camera matrix and distortion coefficients  
-- mtx.npy : Camera matrix (alternative saved format)  
-- dist.npy : Distortion coefficients (alternative saved format)  
 - chessboard.mp4 : Input video for calibration/testing  
 - rectified_output.mp4 : Output corrected video  
 
@@ -65,25 +63,20 @@ They are used to remove distortion from the video frames.
 
 ---
 
-## Demo Results
+# Demo
 
-<p align="center">
-  <b>Original Video</b><br>
-  <video width="450" controls>
-    <source src="chessboard.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
+## Original vs Rectified Video
 
-<p align="center">
-  <b>Rectified Video</b><br>
-  <video width="450" controls>
-    <source src="rectified_output.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
+| Original | Rectified |
+|----------|-----------|
+| **Original Video** | **Rectified Video** |
+| ![Original](chessboard.gif) | ![Rectified](rectified_output.gif) |
 
----
+## Notes
+
+- The calibration is based on chessboard corner detection from multiple frames.
+- The distortion coefficients and camera matrix are computed using OpenCV.
+- The rectified video removes lens distortion effects and aligns straight lines properly.
 
 ## Controls
 - `Space` : Select frame during calibration  
